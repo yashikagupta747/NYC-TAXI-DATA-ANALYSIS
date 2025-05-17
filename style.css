@@ -1,0 +1,264 @@
+:root {
+    --primary: #FFC107; /* Taxi yellow */
+    --secondary: #000000;
+    --accent: #E91E63;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('nyc-skyline.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('https://i.imgur.com/7QqZQ9q.png') center/cover;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--secondary);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--secondary);
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: var(--primary);
+    margin: 15px auto;
+}
+
+/* Project Overview */
+.overview {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Visualization Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-caption {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Insights Grid */
+.insights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.insight-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.insight-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+/* Technical Details */
+.tech-details {
+    background-color: var(--secondary);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.tech-item {
+    background-color: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 80px;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary);
+}
+
+/* Buttons */
+.github-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.github-button:hover {
+    transform: scale(1.05);
+    color: var(--secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 10px 0;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+}

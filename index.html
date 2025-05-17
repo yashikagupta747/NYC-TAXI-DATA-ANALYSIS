@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Taxi Analysis | Your Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>NYC Taxi Trip Analysis</h1>
+        <p class="subtitle">Uncovering patterns in 100K+ yellow cab trips</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#visualizations">Visualizations</a></li>
+            <li><a href="#insights">Key Insights</a></li>
+            <li><a href="#technical">Technical Details</a></li>
+            <li><a href="#code">Source Code</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="overview">
+            <h2>Project Overview</h2>
+            <div class="overview">
+                <p>This project analyzes 100,000+ NYC yellow taxi trips to identify demand patterns, fare trends, and operational efficiencies. Using Python's data science stack, I processed raw trip data, created interactive visualizations, and applied clustering techniques to locate high-demand zones.</p>
+                <br>
+                <p>The analysis reveals optimal operating hours, payment preferences, and geographic hotspots that can help taxi companies optimize fleet deployment and pricing strategies. This end-to-end project demonstrates my skills in data cleaning, exploratory analysis, and business intelligence.</p>
+            </div>
+        </section>
+        
+        <section id="visualizations">
+            <h2>Data Visualizations</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="pickup_heatmap.png" alt="Pickup Locations Heatmap" class="gallery-img">
+                    <div class="gallery-caption">
+                        <h3>Pickup Locations Heatmap</h3>
+                        <p>Geographic distribution of taxi demand</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="hourly_demand.png" alt="Hourly Demand Pattern" class="gallery-img">
+                    <div class="gallery-caption">
+                        <h3>Hourly Demand</h3>
+                        <p>Peak hours at 8-9 AM and 5-6 PM</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="fare_vs_distance.png" alt="Fare vs Distance" class="gallery-img">
+                    <div class="gallery-caption">
+                        <h3>Fare vs Distance</h3>
+                        <p>Linear relationship with $2.50 base + $2.50/mile</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="insights">
+            <h2>Key Insights</h2>
+            <div class="insights">
+                <div class="insight-card">
+                    <div class="insight-icon">🕒</div>
+                    <h3>Peak Hours</h3>
+                    <p>8-9 AM and 5-6 PM on weekdays see 3x higher demand than off-peak hours</p>
+                </div>
+                
+                <div class="insight-card">
+                    <div class="insight-icon">💰</div>
+                    <h3>Fare Trends</h3>
+                    <p>Average fare: $12.50 with $2.50 base + $2.50/mile pricing</p>
+                </div>
+                
+                <div class="insight-card">
+                    <div class="insight-icon">🗺️</div>
+                    <h3>Hot Zones</h3>
+                    <p>Midtown Manhattan and JFK Airport account for 42% of all pickups</p>
+                </div>
+                
+                <div class="insight-card">
+                    <div class="insight-icon">💳</div>
+                    <h3>Payments</h3>
+                    <p>Credit card users tip 18% on average vs 5% for cash payments</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="technical">
+            <h2>Technical Details</h2>
+            <div class="tech-details">
+                <p>This project was built using Python's data science ecosystem with the following tools and techniques:</p>
+                
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <h3>Data Processing</h3>
+                        <ul>
+                            <li>Pandas for cleaning</li>
+                            <li>Datetime handling</li>
+                            <li>Outlier removal</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <h3>Analysis</h3>
+                        <ul>
+                            <li>Geopy for distances</li>
+                            <li>K-means clustering</li>
+                            <li>Statistical analysis</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <h3>Visualization</h3>
+                        <ul>
+                            <li>Matplotlib/Seaborn</li>
+                            <li>Interactive charts</li>
+                            <li>Geographic heatmaps</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <h3>Dataset</h3>
+                        <ul>
+                            <li>100K+ records</li>
+                            <li>NYC TLC Trip Data</li>
+                            <li>Pickup/dropoff locations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="code">
+            <h2>Source Code</h2>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://github.com/yourusername/nyc-taxi-analysis" class="github-button">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                <p style="margin-top: 20px;">Full Jupyter notebook with analysis and visualization code</p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- <footer>
+        <h3>Want to see more projects?</h3>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
